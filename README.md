@@ -7,7 +7,7 @@
 
 2. Body
    All 3 are separate pages and have a different body
-  {-Home(Home contents here)
+  {-Home
   -About
   -Contact
   -Login page} 
@@ -23,9 +23,3 @@
   - Now if the data that is entered doesn't match the data from the API throw the user  an Invalid Credentials div
   - If the data matches, log the user in and redirect to the home page.
   - If the user logs out of the website, make sure that he/she has no longer access to your home about and contact page.
-
-
-  # Key points
-
-  - UseStates for buttons, if the user clicks the signout button, redirect to the login page.
-  - UseStates for a div that is only visible when user signs out in the login page.(Error message can be displayed here.)

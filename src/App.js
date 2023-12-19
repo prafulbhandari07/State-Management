@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import Billing from './pages/Billing';
+import Account from './pages/Account';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import NotFound from './pages/Notfound';
+import { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <Routes>
+        <Route path='/' element={<Home isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}></Route>
+        <Route path='/billing' element={<Billing isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}></Route>
+        <Route path='/account' element={<Account isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}></Route>
+        <Route path='/login' element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}></Route>
+        <Route path='/:id' element={<NotFound />}></Route>
+      </Routes>
+      <Footer />
+    </>
   );
 }
 

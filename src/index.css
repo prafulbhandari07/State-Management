@@ -1,13 +1,188 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0%;
+  padding: 0%;
+  background-color: #f1f1f1;
+  font-family: Silkscreen, sans-serif;
+}
+
+#root {
+  margin: 0%;
+  padding: 0%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  color: azure;
+  background-color: #727272;
+}
+
+#headerLogo {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#headerItems {
+  width: 60%;
+  height: 100%;
+}
+
+#headerItems ul {
+
+  display: flex;
+  height: 100%;
+}
+
+#headerItems li {
+  list-style: none;
+  padding-top: 50px;
+  padding-left: 100px;
+}
+
+#headerItems li a {
+  text-decoration: none;
+  color: white;
+}
+
+#headerItems li a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: 4px underline rgb(75, 255, 75);
+}
+
+#headerBtn {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#headerBtn button {
+  margin: 30px;
+  height: 20px;
+  width: 100px;
+  border-radius: 10px;
+  border-color: rgb(112, 0, 216);
+}
+
+#headerBtn button:hover {
+  background-color: rgb(202, 0, 81);
+  border: none;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: limegreen;
+  display: flex;
+}
+
+#footerLogo {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#footerRight {
+  width: 75%;
+}
+
+#rightTop {
+  width: 100%;
+  height: 50%;
+}
+
+#rightTop ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 10px;
+}
+
+#rightBot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+#loginContainer {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loginCard {
+  height: 80%;
+  border: 2px solid blueviolet;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loginCard form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#loginCard p {
+  padding-top: 80px;
+}
+
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.notFoundContainer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  height: 50px;
+  width: 500px;
+  color: rgb(255, 0, 0);
+  font-style: italic;
+  box-shadow: 7px 7px 7px 5px black;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#loginCard h1 {
+  color: rgb(255, 0, 0);
+  padding-top: 50px;
+  font-size: small;
+  font-family: Silkscreen, sans-serif;
 }
